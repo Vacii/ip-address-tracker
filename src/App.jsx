@@ -25,12 +25,13 @@ function App() {
       timezone: "+02:00",
     },
   });
-  const APIkey = "add API key from https://geo.ipify.org";
 
-  const googleAPI = "add google API key";
+  const geoAPIkey = import.meta.env.VITE_GEO_API_KEY;
+
+  const googleAPIkey = import.meta.env.VITE_GOOGLE_API_KEY;
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: googleAPI,
+    googleMapsApiKey: googleAPIkey,
   });
 
   const defaultMapOptions = {
@@ -42,7 +43,7 @@ function App() {
   const handleSearch = (e) => {
     e.preventDefault();
     // fetch(
-    //   `https://geo.ipify.org/api/v2/country,city?apiKey=${APIkey}&ipAddress=${ipAddress}`
+    //   `https://geo.ipify.org/api/v2/country,city?apiKey=${geoAPIkey}&ipAddress=${ipAddress}`
     // )
     //   .then((response) => response.json())
     //   .then((data) => setUserData(data))
