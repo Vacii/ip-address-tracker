@@ -1,9 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 #root {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
   height: 100vh;
   width: 100vw;
   background-color: black;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+p.vertical-scaling {
+  display: inline-block;
+  transform: scale(1, 0.5);
+  /* Safari and Chrome */
+  -webkit-transform: scale(1, 0.9);
+  /* Firefox */
+  -moz-transform: scale(1, 0.9);
+  /* IE 9+ */
+  -ms-transform: scale(1, 0.9);
+  /* Opera */
+  -o-transform: scale(1, 0.9);
+}
+
+@media screen and (min-width: 768px) {
+  .flex-wrapper .flex-item {
+    position: relative;
+  }
+  .flex-item {
+    flex: 1;
+  }
+
+  .flex-wrapper .flex-item:not(:last-child)::after {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 0;
+    height: 80%;
+    content: "";
+    border: 0.5px solid #969696;
+    opacity: 50%;
+  }
+
+  p.vertical-scaling {
+    display: inline-block;
+    transform: scale(1, 0.5);
+    /* Safari and Chrome */
+    -webkit-transform: scale(1, 1);
+    /* Firefox */
+    -moz-transform: scale(1, 1);
+    /* IE 9+ */
+    -ms-transform: scale(1, 1);
+    /* Opera */
+    -o-transform: scale(1, 1);
+  }
 }

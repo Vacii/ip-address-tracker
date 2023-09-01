@@ -61,16 +61,19 @@ function App() {
 
   return (
     <>
-      <header className="h-[40%] flex flex-col items-center justify-center bg-[url(./assets/pattern-bg-mobile.png)] bg-no-repeat bg-cover pt-5 gap-6">
-        <h1 className="text-3xl text-white">IP Address tracker</h1>
-        <form className="w-[80%] flex flex-row" onSubmit={handleSearch}>
+      <header className="h-[40%] max-h-[400px] flex flex-col items-center justify-center bg-[url(./assets/pattern-bg-mobile.png)] md:bg-[url(./assets/pattern-bg-desktop.png)] bg-no-repeat bg-cover gap-10">
+        <h1 className="text-3xl font-medium text-white">IP Address Tracker</h1>
+        <form
+          className="w-[80%] max-w-[600px] flex flex-row "
+          onSubmit={handleSearch}
+        >
           <input
             type="text"
             name="ip-address"
             placeholder={ipAddress}
-            className="w-full p-2 px-5 h-16 text-xl rounded-l-xl"
+            className="w-full p-2 px-5 h-16 text-xl rounded-l-xl font-normal cursor-pointer"
           />
-          <button className="bg-black w-16 flex items-center justify-center rounded-r-xl">
+          <button className="bg-black hover:bg-[#2b2b2b] w-16 flex items-center justify-center rounded-r-xl">
             <img
               src="src/assets/icon-arrow.svg"
               alt="submit-arrow-icon"
@@ -78,41 +81,43 @@ function App() {
             ></img>
           </button>
         </form>
-        <div className="flex flex-col justify-center items-center py-3 bg-white w-[80%] gap-5 mb-[-150px] rounded-xl z-10 shadow-lg">
-          <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col flex-wrapper md:flex-row justify-center md:justify-evenly items-center py-7 bg-white w-[80%] md:w-[90%] ld:w-[80%] max-w-[1200px] md:min-h-[150px] gap-6  mb-[-150px] md:mb-[-100px] rounded-xl z-10 shadow-lg px-10">
+          <div className="flex flex-col flex-item justify-center md:justify-start items-center md:items-start userData gap-1 md:gap-3 px-5 md:h-full">
             {" "}
-            <p className="text-xs text-gray-600 uppercase tracking-wider">
+            <p className="text-xs text-[#969696] uppercase tracking-wider md:tracking-widest vertical-scaling">
               IP ADDRESS
             </p>
-            <p>{ipAddress}</p>
+            <p className="text-xl md:text-2xl">{ipAddress}</p>
           </div>
 
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col flex-item justify-center md:justify-start items-center md:items-start userData gap-1 md:gap-3 px-5 md:h-full">
             {" "}
-            <p className="text-xs text-gray-600 uppercase tracking-wider">
+            <p className="text-xs text-[#969696] uppercase tracking-wider md:tracking-widest vertical-scaling">
               location
             </p>
-            <p>
+            <p className="text-xl md:text-2xl">
               {userData.location.city}, {userData.location.country}
             </p>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col flex-item justify-center md:justify-start items-center md:items-start userData gap-1 md:gap-3 px-5 md:h-full">
             {" "}
-            <p className="text-xs text-gray-600 uppercase tracking-wider">
+            <p className="text-xs text-[#969696] uppercase tracking-wider md:tracking-widest vertical-scaling">
               timezone
             </p>
-            <p>UTC {userData.location.timezone}</p>
+            <p className="text-xl md:text-2xl">
+              UTC {userData.location.timezone}
+            </p>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col flex-item justify-center md:justify-start items-center md:items-start userData gap-1 md:gap-3 px-5 md:h-full">
             {" "}
-            <p className="text-xs text-gray-600 uppercase tracking-wider">
+            <p className="text-xs text-[#969696] uppercase tracking-wider md:tracking-widest vertical-scaling">
               isp
             </p>
-            <p>{userData.isp}</p>
+            <p className="text-xl md:text-2xl">{userData.isp}</p>
           </div>
         </div>
       </header>
-      <main className="h-[60%] w-full bg-slate-800">
+      <main className="h-full w-full bg-slate-800">
         {isLoaded ? (
           <GoogleMap
             zoom={12}
