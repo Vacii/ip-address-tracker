@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-Check out the live demo of the IP Address Tracker: [Live Demo](https://vacii.github.io/ip-address-tracker/){:target="_blank"}
+Check out the live demo of the IP Address Tracker: [Live Demo](https://vacii.github.io/ip-address-tracker/)
 
 ## Screenshots
 
