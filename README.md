@@ -1,8 +1,58 @@
-# React + Vite
+# IP Address Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**IP Address Tracker** is a web application that allows users to track IP addresses and view their corresponding locations on a map. This project is built using React and utilizes various APIs to provide geolocation information.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+|                       Desktop                       |                       Mobile                       |
+| :-------------------------------------------------: | :------------------------------------------------: |
+| ![Screenshot 1](screenshots/ip-tracker-desktop.png) | ![Screenshot 2](screenshots/ip-tracker-mobile.png) |
+
+## Features
+
+- Track IP addresses and view their locations on a map.
+- Search for any IP address or domain.
+- Display detailed information about the IP address, including its location, timezone, and ISP.
+- Responsive design for both mobile and desktop.
+
+## Technologies Used
+
+- React
+- React Google Maps API
+- IPify API
+- Geo IPify API
+- HTML5/CSS3
+
+## Installation
+
+1. Clone the repository: `git clone https://github.com/Vacii/ip-address-tracker.git`
+2. Navigate to the project directory: `cd ip-address-tracker`
+3. Install dependencies: `npm install`
+4. Set up API keys for Google Maps and Geo IPify by creating a `.env` file with the following content:
+
+```
+VITE_GEO_API_KEY=your_geo_api_key
+VITE_GOOGLE_API_KEY=your_google_api_key
+```
+
+5. Start the development server: `npm start`
+
+## Usage
+
+- Access the application through your web browser.
+- Enter an IP address or domain in the search input and press the search button.
+- View the location on the map along with detailed information about the IP address.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow the standard GitHub workflow:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Add feature-name"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Create a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
