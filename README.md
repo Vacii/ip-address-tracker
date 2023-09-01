@@ -2,6 +2,10 @@
 
 **IP Address Tracker** is a web application that allows users to track IP addresses and view their corresponding locations on a map. This project is built using React and utilizes various APIs to provide geolocation information.
 
+## Live Demo
+
+Check out the live demo of the IP Address Tracker: [Live Demo](https://vacii.github.io/ip-address-tracker/)
+
 ## Screenshots
 
 |                       Desktop                       |                       Mobile                       |
