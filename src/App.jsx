@@ -69,6 +69,16 @@ function App() {
         }));
       })
       .catch((error) => console.log(error));
+
+    fetch(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${geoAPIkey}&ipAddress=${ipAddress}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setUserData(data);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
